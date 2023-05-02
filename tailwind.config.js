@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'silver-lake-blue': '#778DA9',
+      },
+      scale: {
+        '-100': '-1'
+      }
+    },
   },
   plugins: [],
 }

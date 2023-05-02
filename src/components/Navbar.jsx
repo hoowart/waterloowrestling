@@ -14,7 +14,7 @@ const Navbar = () => {
     {name:"Pricing", link:"/pricing"},
     {name:"Register", link:"/register"},
     {name:"Gallery", link:"/gallery"},
-    {name:"Contact Us", link:"/contact-us"}
+    {name:"Contact Us", link:"/contact"}
   ];
   return (
     <>
@@ -24,7 +24,7 @@ const Navbar = () => {
           <a href="/about">
             <img className=" h-20 m-4 hover:cursor-pointer flex" src={waterloowrestlinglogo}></img>
           </a>
-          <ul className="hidden md:flex list-none gap-10 text-xl p-6">
+          <ul className="hidden md:flex list-none gap-10 text-l p-6">
             {
               Links.map((Link)=>(
                 <li>
@@ -41,7 +41,7 @@ const Navbar = () => {
             {!nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20}/>}
           </div>
           
-          <div className={!nav ? "fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-black ease-in-out duration-500" : " fixed left-[-100%]"}>
+          <div className={!nav ? "fixed z-5 left-0 top-0 right-0 w-[60%] h-full border-r border-r-gray-900 bg-black ease-in-out duration-500" : "fixed left-[-100%]"}>
             <a href="/about">
               <img className="h-20 m-4 hover:cursor-pointer flex" src={waterloowrestlinglogo}></img>
             </a>
