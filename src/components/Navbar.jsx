@@ -1,13 +1,27 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import waterloowrestlinglogo from './images/waterloowrestling.webp'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 
 const Navbar = () => {
-  const [nav, setNav] = useState(true)
+
+  {/* Set intial state of hamburger menu to false */}
+  const [nav, setNav] = useState(false)
   
+
+  {/* Hamburger menu enable and disable */}
   const handleNav = () => {
     setNav(!nav)
   }
+
+  let menuRef = useRef();
+
+  useEffect(()=> {
+    document.addEventListener("mousedown", (event) => {
+      if (!menuRef.current.contains(event.target)) {
+        setNav(false);
+      }
+    })
+  })
 
   let Links =[
     {name:"About", link:"/about"},
@@ -27,7 +41,7 @@ const Navbar = () => {
           <ul className="hidden md:flex list-none gap-10 text-l p-6">
             {
               Links.map((Link)=>(
-                <li>
+                <li key={Link.link}>
                   <a href={Link.link}>
                     <h1 className="hover:text-yellow-400">
                       {Link.name}
@@ -38,17 +52,15 @@ const Navbar = () => {
             }
           </ul>
           <div onClick={handleNav} className="block md:hidden">
-            {!nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20}/>}
+            {nav ? <AiOutlineClose size={40} className="m-6"/> : <AiOutlineMenu size={40} className="m-6"/>}
           </div>
           
-          <div className={!nav ? "fixed z-5 left-0 top-0 right-0 w-[60%] h-full border-r border-r-gray-900 bg-black ease-in-out duration-500" : "fixed left-[-100%]"}>
-            <a href="/about">
-              <img className="h-20 m-4 hover:cursor-pointer flex" src={waterloowrestlinglogo}></img>
-            </a>
+          <div ref={menuRef} className={nav ? "fixed z-5 left-0 top-0 right-0 w-[60%] h-full border-r border-r-gray-900 bg-black ease-in-out duration-500 md:hidden z-10" : "fixed left-[-150%]"}>
+            <img className="h-20 m-4 flex" src={waterloowrestlinglogo}></img>
             <ul className="p-4 bg-black">
               {
                 Links.map((Link)=>(
-                  <li>
+                  <li key={Link.link}>
                     <a href={Link.link}>
                       <h1 className="hover:text-yellow-400 p-4 border-b border-gray-600">
                         {Link.name}
