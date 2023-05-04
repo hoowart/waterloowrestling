@@ -11,22 +11,24 @@ const About = () => {
   return (
     <>
       <Navbar />
-      <div>
+  
+
 
         {/* Hero */}
         <div style={{ 
           backgroundImage: `url(${hero})`,
-          }} className="flex justify-center items-center max-w-[2000px] h-[1000px] w-lg bg-center bg-cover bg-no-repeat right-0">
+          }} className="flex justify-center items-center h-[1000px] w-lg bg-center bg-cover bg-no-repeat right-0">
           <div>
               <div className="p-10 backdrop-blur-md rounded items-center justify-center flex-col">
-                <div className="justify-center flex text-3xl md:text-5xl font-bold p-2">WATERLOO WRESTLING</div>
+                <div className="justify-center flex text-4xl xsm:text-3xl md:text-5xl font-bold p-2 md:tracking-wider">WATERLOO WRESTLING</div>
                 <div className="justify-center flex">We believe a warrior exists within every one of us.</div>
-                <div className="justify-center flex">Become an inspiration.</div>
+                <div className="xsm:justify-center xsm:flex">Become an inspiration.</div>
               </div>
-
-              <a href="/pricing" className="flex p-6">
-                <button className="bg-yellow-50 text-black w-[200px] rounded-md my-6 mx-auto px-6 py-3 font-medium hover:bg-yellow-100 shadow-xl shadow-black">Get Started</button>
-              </a>
+              <div className="flex justify-center pt-16">
+                <a href="/register" className="flex">
+                  <button className="bg-yellow-50 text-black w-[200px] rounded-md px-6 py-3 font-medium hover:bg-yellow-100 shadow-xl shadow-black">Get Started</button>
+                </a>
+              </div>
 
           </div>
         </div>
@@ -43,8 +45,8 @@ const About = () => {
             
             <div className="">
               <div className="text-4xl p-7 flex justify-center pt-12 lg:pt-0">WHO WE ARE</div>
-              <div className="p-7 pt-0">The University of Waterloo's wrestling team was once a powerhouse in Canadian wrestling, with multiple Provincial and National champions, as well as National team members and Olympians.
-Kurt Boese was a 3x OUAA gold medallist for Waterloo and competed at the 1960 Olympics. He went on to coach the 1972 Olympic team where he coached 3 Waterloo Warrior athletes - Egon Beiler, Pat Bolger, and George Saunders (all members of Waterloo's Hall of Fame!). Egon Beiler himself is considered to be one of Canada's best all-time wrestlers, with an impressive list of accomplishments, including 2 Commonwealth Gold medals, a Pan-American Games Gold, and 11 National Championships.
+              <div className="p-7 pt-0">The University of Waterloo's wrestling team was once a powerhouse in Canadian wrestling, with multiple Provincial and National champions, as well as National team members and Olympians. <br /><br />
+Kurt Boese was a 3x OUAA gold medallist for Waterloo and competed at the 1960 Olympics. He went on to coach the 1972 Olympic team where he coached 3 Waterloo Warrior athletes - Egon Beiler, Pat Bolger, and George Saunders (all members of Waterloo's Hall of Fame!). Egon Beiler himself is considered to be one of Canada's best all-time wrestlers, with an impressive list of accomplishments, including 2 Commonwealth Gold medals, a Pan-American Games Gold, and 11 National Championships. <br /><br />
 Unfortunately, Waterloo Wrestling ended its reign in the late 1980s without a coach to run the program... and now, we're bringing wrestling back to the Waterloo Region!</div>
             </div>
           </div>
@@ -54,7 +56,7 @@ Unfortunately, Waterloo Wrestling ended its reign in the late 1980s without a co
 
 
         {/* Meet your coaches */}
-        <div className="max-w-[1240px] mx-auto top-0 right-0 left-0 pb-36 rounded-md">
+        <div className="max-w-[1240px] mx-auto top-0 right-0 left-0 pb-36">
           <div className="text-3xl text-white flex justify-center items-center pb-10 sm:text-4xl">
           MEET YOUR COACHES
           </div>
@@ -101,7 +103,7 @@ Unfortunately, Waterloo Wrestling ended its reign in the late 1980s without a co
         </div>
 
         {/* Tournament */}
-        <div className="max-w-[1240px] mx-auto top-0 right-0 left-0 pt-36 pb-36 rounded-md">
+        <div className="max-w-[1240px] mx-auto top-0 right-0 left-0 pt-36 pb-36">
             <div className="text-white flex justify-center items-center pb-10 text-4xl">
             TOURNAMENTS
             </div>
@@ -115,7 +117,7 @@ Unfortunately, Waterloo Wrestling ended its reign in the late 1980s without a co
             </div>
         </div>
         
-      </div>
+
       <Footer />
     </>
     

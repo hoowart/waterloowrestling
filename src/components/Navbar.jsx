@@ -25,9 +25,8 @@ const Navbar = () => {
 
   let Links =[
     {name:"About", link:"/about"},
-    {name:"Pricing", link:"/pricing"},
-    {name:"Register", link:"/register"},
     {name:"Gallery", link:"/gallery"},
+    {name:"Register", link:"/register"},
     {name:"Contact Us", link:"/contact"}
   ];
   return (
@@ -43,7 +42,7 @@ const Navbar = () => {
               Links.map((Link)=>(
                 <li key={Link.link}>
                   <a href={Link.link}>
-                    <h1 className="hover:text-yellow-400">
+                    <h1 className="hover:text-yellow-400 tracking-wide">
                       {Link.name}
                     </h1>
                   </a>
@@ -62,7 +61,7 @@ const Navbar = () => {
                 Links.map((Link)=>(
                   <li key={Link.link}>
                     <a href={Link.link}>
-                      <h1 className="hover:text-yellow-400 p-4 border-b border-gray-600">
+                      <h1 className="hover:text-yellow-400 p-4 border-b border-gray-600 tracking-wide">
                         {Link.name}
                       </h1>
                     </a>
