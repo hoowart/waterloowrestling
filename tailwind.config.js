@@ -13,10 +13,13 @@ export default {
         '-100': '-1',
       },
       screens: {
+
         'xsm': '474px',
 
         'sm': '640px',
         // => @media (min-width: 640px) { ... }
+
+        'cmd': '740px',
   
         'md': '768px',
         // => @media (min-width: 768px) { ... }
@@ -32,6 +35,8 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
 
