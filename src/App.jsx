@@ -4,7 +4,6 @@ import Contact from './components/Contact';
 import Gallery from './components/Gallery';
 import Register from './components/Register';
 import Null from "./components/Null"
-import Success from "./components/Success"
 
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/success" element={<Success />} />
             <Route path="*" element={<Null />} />
           </Routes>
         </BrowserRouter>

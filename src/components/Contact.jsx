@@ -1,43 +1,12 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import {useFormik} from "formik";
-import * as Yup from "yup"
-import { useNavigate } from 'react-router-dom'
 
 const Contact = () => {
-
-  const navigate = useNavigate();
-
-  const formik = useFormik({
-    initialValues: {
-      name: "",
-      email: "",
-      message: ""
-    },
-
-    //Validate Form
-    validationSchema: Yup.object({
-      name: Yup.string()
-        .required("Name is required"),
-      email: Yup.string()
-        .email("Invalid email address")
-        .required("Email is required"),
-      message: Yup.string()
-        .required("Message is required")
-        .min(150, "Must be more than 150 characters")
-        .max(1500, "Must be less than 1500 characters")
-    }),
-
-    //Submit Form
-
-    onSubmit: (values) => {
-      navigate("/success")
-    }
-  });
 
   return (
     <>
       <Navbar />
+      
       <div className="m-auto flex-col max-w-[900px] justify-center items-center">
         <div className="flex-col justify-center items-center pt-16">
           <h1 className="tracking-wider text-3xl lg:text-4xl pb-7 pt-4 flex justify-center">
@@ -51,16 +20,35 @@ const Contact = () => {
               Waterloo, ON
             </div>
             <div className="justify-center flex">
-              R6G 7J8
+              N2L 4E7
             </div>
             <div className="justify-center flex">
-              (343) - 889 - 4853
+              (647) 229-1696
             </div>
             <div className="justify-center flex">
             wloowrestling@gmail.com
             </div>
           </div>
-
+          <div className="py-10 flex justify-evenly">
+            <div className="flex-col">
+              <p>Sunday</p>
+              <p>Monday</p>
+              <p>Tuesday</p>
+              <p>Wednesday</p>
+              <p>Thursday</p>
+              <p>Friday</p>
+              <p>Saturday</p>
+            </div>
+            <div>
+              <p className="flex justify-center">CLOSED</p>
+              <p className="flex justify-center">8PM - 9:30PM</p>
+              <p className="flex justify-center">CLOSED</p>
+              <p className="flex justify-center">8PM - 9:30PM</p>
+              <p className="flex justify-center">8PM - 9:30PM</p>
+              <p className="flex justify-center">CLOSED</p>
+              <p className="flex justify-center">CLOSED</p>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -82,8 +70,10 @@ const Contact = () => {
       <div className="m-auto flex-col xl:max-w-[900px] xl:justify-center xl:items-center"></div>
         <div className="xl:flex justify-center items-center pt-10 xl:pb-10">
             <form 
-            onSubmit={formik.handleSubmit} 
-            className="bg-white xl:flex rounded-sm xl:w-1/2 text-black">
+            className="bg-white xl:flex rounded-sm xl:w-1/2 text-black"
+            action="https://formspree.io/f/xayzvarw"
+            method="POST">
+              
               <div className="flex-1 text-gray-700 p-20 pb-32">
                 <h1 className="text-3xl pb-2 tracking-wide">INQUIRY</h1>
                 <p className="text-xl text-gray-500">
@@ -92,36 +82,30 @@ const Contact = () => {
                 <div className="mt-6">
 
                   <div className="pb-4">
-                    <label className={`block pb-2 ${formik.touched.name && formik.errors.name ? "text-red-400 font-bold": "" }`} htmlFor="name">{formik.touched.name && formik.errors.name ? formik.errors.name : "Name"}</label>
-                    <input className="border-2 border-gray-500 round-md focus:border-yellow-500 focus:ring-yellow-500 w-full md:w-1/2" 
+                    <label className="block pb-2" htmlFor="name">Name</label>
+                    <input className="border-2 border-gray-500 round-md focus:border-yellow-500 focus:ring-yellow-500 w-full md:w-1/2"
                     type="text" 
                     name="name"
-                    value={formik.values.name}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    placeholder="Enter your name"/>
+                    placeholder="Enter your name"
+                    required/>
                   </div>
 
                   <div className="pb-4">
-                    <label className={`block pb-2 ${formik.touched.email && formik.errors.email ? "text-red-400 font-bold": "" }`} htmlFor="name">{formik.touched.email && formik.errors.email ? formik.errors.email : "Email"}</label>
+                    <label className="block pb-2" htmlFor="name">Email</label>
                     <input className="border-2 border-gray-500 round-md focus:border-yellow-500 focus:ring-yellow-500 w-full md:w-1/2" 
                     type="text" 
                     name="email" 
-                    value={formik.values.email}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    placeholder="Enter your email"/>
+                    placeholder="Enter your email"
+                    required/>
                   </div>
 
                   <div className="pb-4">
-                    <label className={`block pb-2 ${formik.touched.message && formik.errors.message ? "text-red-400 font-bold": "" }`} htmlFor="name">{formik.touched.message && formik.errors.message ? formik.errors.message : "Message"}</label>
+                    <label className="block pb-2" htmlFor="name">Message</label>
                     <textarea className="border-2 border-gray-500 round-md focus:border-yellow-500 focus:ring-yellow-500 w-full min-h-[240px]" 
                     type="text" 
                     name="message" 
-                    value={formik.values.message}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    placeholder="Enter your message"/>
+                    placeholder="Enter your message"
+                    required/>
                   </div>
                   <div className="pt-4 float-right">
                     <button type="submit" className="flex p-4 px-6 border-2 border-gray-500 hover:bg-black hover:text-white hover:border-black duration-500">SUBMIT</button>

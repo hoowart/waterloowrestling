@@ -84,7 +84,7 @@ Unfortunately, Waterloo Wrestling ended its reign in the late 1980s without a co
 
               <div className="relative">
                 <img src={kylerobinsonsolo} alt="" className="relative rounded-lg drop-shadow-sm object-cover object-center h-80 w-80 "/>
-                <div className="bg-white absolute h-[50%] w-[90%] top-[80%] left-[5%] rounded-lg shadow-md shadow-gray-500  p-4">
+                <div className="bg-white absolute h-[50%] w-[90%] top-[80%] left-[5%] rounded-lg shadow-md shadow-gray-500 p-4">
                   <div className="flex justify-center text-black">
                     Kyle Robinson
                   </div>

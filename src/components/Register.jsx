@@ -1,18 +1,13 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import {ImCheckboxChecked} from 'react-icons/im'
-import { AnimatePresence, motion } from 'framer-motion'
 
 
 const Register = () => {
   return (
     <>
         <Navbar />
-        <AnimatePresence>
-          <motion.div 
-            animate={{ opacity: 1}}
-            initial={{ opacity: 0}} 
-            transition={{ delay: 0.2 }}
+          <div 
             className="m-auto flex-col max-w-[900px] justify-center items-center">
             <div className="flex justify-center items-center p-10 pb-4">
               <div className="py-7">
@@ -79,9 +74,7 @@ const Register = () => {
                   <button className="">OUR LOCATION</button>
                 </a>
               </div>
-          </motion.div>
-        </AnimatePresence>
-
+          </div>
     </>
     
   )
