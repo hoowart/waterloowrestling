@@ -16,7 +16,7 @@ const About = () => {
 
         {/* Hero */}
         <div style={{ 
-          backgroundImage: `url(${hero})`,
+          backgroundImage: `url(https://ik.imagekit.io/41cluqtdq/waterloowrestling/kylerobinson.jpg?updatedAt=1684542624415)`,
           }} className="flex justify-center items-center h-[1000px] w-lg bg-center bg-cover bg-no-repeat right-0">
           <div>
               <div className="p-10 backdrop-blur-md rounded items-center justify-center flex-col">

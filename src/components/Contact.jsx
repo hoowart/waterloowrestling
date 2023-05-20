@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import {AiFillInstagram} from 'react-icons/ai'
 
 const Contact = () => {
 
@@ -9,10 +10,10 @@ const Contact = () => {
       
       <div className="m-auto flex-col max-w-[900px] justify-center items-center">
         <div className="flex-col justify-center items-center pt-16">
-          <h1 className="tracking-wider text-3xl lg:text-4xl pb-7 pt-4 flex justify-center">
+          <h1 className="tracking-wider text-3xl lg:text-4xl py-7 flex justify-center">
             CONTACT US
           </h1>
-          <div className="pt-4 flex-col justify-center">
+          <div className="pb-8 pt-0 flex-col justify-center">
             <div className="justify-center flex">
               420 Weber St N Unit 1
             </div>
@@ -28,6 +29,15 @@ const Contact = () => {
             <div className="justify-center flex">
             wloowrestling@gmail.com
             </div>
+            <div className="flex justify-center">
+              <a target="_blank" href="https://www.instagram.com/wloowrestling/" className="items-center flex">
+              <AiFillInstagram />
+              @wloowrestling
+              </a>
+            </div>
+          </div>
+          <div className="tracking-wider text-3xl lg:text-4xl pt-4 flex justify-center">
+            CLASSES
           </div>
           <div className="py-10 flex justify-evenly">
             <div className="flex-col">

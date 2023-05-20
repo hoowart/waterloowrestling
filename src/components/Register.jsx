@@ -17,7 +17,7 @@ const Register = () => {
                 <div className="flex items-center justify-center">
                   <div>$</div>
                   <h2 className="flex justify-center font-bold text-5xl p-2 tracking-wide">
-                    44
+                    64
                   </h2>
                   <div>.99</div>
                 </div>
@@ -35,7 +35,7 @@ const Register = () => {
                   <div className="pr-2">
                     <ImCheckboxChecked /> 
                   </div>
-                    Multiple weekly sessions
+                    Multiple weekly classes
                 </div>
 
                 <div className="flex items-center pb-3">

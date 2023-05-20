@@ -1,7 +1,7 @@
 {
   "name": "wrestling",
   "private": true,
-  "homepage": "https://waterloowrestling.com/about",
+  "homepage": "https://waterloowrestling.com/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

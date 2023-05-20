@@ -1,5 +1,5 @@
 import React from 'react'
-import {AnimatePresence, motion} from "framer-motion"
+import waterloowrestlinglogo from './images/waterloowrestling.webp'
 
 const Null = () => {
   return (
@@ -7,7 +7,7 @@ const Null = () => {
         <div className="flex justify-center items-center h-screen">
           <div className="flex-col">
               <div className="flex justify-center items-center pb-10">
-                  <img src="./public/waterloowrestling.webp" alt="" className="max-h-24 md:max-h-40"/> 
+                  <img src={waterloowrestlinglogo} alt="" className="max-h-24 md:max-h-40"/> 
               </div>
               
               <div>
